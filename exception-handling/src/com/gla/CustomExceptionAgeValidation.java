@@ -2,6 +2,12 @@ package com.gla;
 
 import java.util.Scanner;
 
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
 public class CustomExceptionAgeValidation {
     public static void validateAge(int age) throws InvalidAgeException {
         if (age < 18) {
